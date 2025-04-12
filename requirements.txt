@@ -1,0 +1,20 @@
+# Core dependencies for nepseutils
+cryptography
+tabulate
+tkinter
+atexit
+
+# Required for meroshare interaction
+nepseutils
+
+# Standard libraries used (no need to install)
+# argparse
+# logging
+# os
+# time
+# sys
+# json
+# cmd
+# getpass
+# typing
+# datetime
