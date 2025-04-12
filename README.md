@@ -67,7 +67,7 @@ To make the application run automatically when you start your computer:
 
 The program creates two log files to keep track of its activities:
 
-1. `autoit_execution.log`: Records when the program runs, with timestamps in 12-hour format
+1. `autoit_execution.log`: Records when the program runs, with timestamps
 2. `nepse_application.log`: Contains detailed information about the application process
 
 Additionally, a popup notification will display at the end of execution summarizing:
