@@ -24,6 +24,8 @@ from nepseutils.core.meroshare import MeroShare
 from nepseutils.core.portfolio import PortfolioEntry
 from nepseutils.utils import config_converter
 
+BASE_DIR = r'Your\Location\Here'
+
 class TeeLogger:
     """A class that duplicates output to both a file and the original stream."""
     
@@ -51,7 +53,7 @@ class TeeLogger:
         self.close()
 
 # Set up regular logging
-log_filename = r'File\Location\Here'
+log_filename = os.path.join(BASE_DIR, 'nepse_application.log')
 logging.basicConfig(filename=log_filename, filemode='w', level=logging.INFO,
                    format='%(asctime)s - %(message)s',
                    datefmt='%m/%d/%Y %I:%M:%S %p')  # Month/Day/Year 12-hour format with AM/PM
@@ -71,7 +73,7 @@ class AutomatedNepseUtils(Cmd):
     ordinary_shares = []
     current_share_index = 0
     application_summary = []
-    previously_applied_file = os.path.join(r'Path\to\Json\File\Here', 'previously_applied_shares.json')
+    previously_applied_file = os.path.join(BASE_DIR, 'previously_applied_shares.json')
     skip_popups_until_end = True  # Flag to control popup behavior
 
     def preloop(self, *args, **kwargs):
@@ -82,7 +84,7 @@ class AutomatedNepseUtils(Cmd):
 
             MeroShare.default_config_directory().mkdir(parents=True, exist_ok=True)
 
-            password = "Enter password here"  # Automatically enter password
+            password = "PASSWORD HERE"  # Automatically enter password
             self.ms = MeroShare.new(password)
 
         else:
@@ -90,7 +92,7 @@ class AutomatedNepseUtils(Cmd):
             sys.stdout.write("Waiting for password prompt...\n")
             time.sleep(1)  # Give time for the prompt to appear
             
-            password = "Enter password here"  # Automatically enter password
+            password = "PASSWORD HERE"  # Automatically enter password
             
             try:
                 self.ms = MeroShare.load(password)
