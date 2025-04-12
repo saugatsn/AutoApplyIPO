@@ -51,7 +51,7 @@ class TeeLogger:
         self.close()
 
 # Set up regular logging
-log_filename = 'nepse_application.log'
+log_filename = r'File\Location\Here'
 logging.basicConfig(filename=log_filename, filemode='w', level=logging.INFO,
                    format='%(asctime)s - %(message)s',
                    datefmt='%m/%d/%Y %I:%M:%S %p')  # Month/Day/Year 12-hour format with AM/PM
@@ -71,7 +71,7 @@ class AutomatedNepseUtils(Cmd):
     ordinary_shares = []
     current_share_index = 0
     application_summary = []
-    previously_applied_file = "previously_applied_shares.json"
+    previously_applied_file = os.path.join(r'Path\to\Json\File\Here', 'previously_applied_shares.json')
     skip_popups_until_end = True  # Flag to control popup behavior
 
     def preloop(self, *args, **kwargs):
