@@ -19,7 +19,7 @@ Before using this tool, you need to install and set up the following:
 4. Copy the main.py file to this folder
 5. Update the following in main.py:
    - Change the password in the `preloop` function 
-   - Update the file paths for at `BASE_DIR`
+   - Update the file paths at `BASE_DIR` where the log file and previously applied shares files will be saved
 
 ## AutoIt Script Setup
 1. Open the `.au3` file in a text editor
