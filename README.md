@@ -23,7 +23,7 @@ Before using this tool, you need to install and set up the following:
 
 ## AutoIt Script Setup
 1. Open the `.au3` file in a text editor
-2. Update the location in `$workingDir` where main.py is and where the log file will be saved
+2. Update the location inside the function `FileChangeDir()` where main.py is and where the log file will be saved
 3. Save the file
 
 ## Building the Executable
