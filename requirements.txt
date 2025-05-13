@@ -1,7 +1,6 @@
 # Core dependencies for nepseutils
 cryptography
 tabulate
-atexit
 
 # Required for meroshare interaction
 nepseutils
@@ -18,3 +17,4 @@ nepseutils
 # typing
 # datetime
 # tkinter
+# atexit
